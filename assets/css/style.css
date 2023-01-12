@@ -90,7 +90,8 @@ h6 {
   height: 70px;
   z-index: 997;
   transition: all 0.5s;
-  background: #000;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter:blur(5px);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -398,7 +399,7 @@ h6 {
 
 #hero h1 {
   margin: 0 0 30px 0;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -1738,3 +1739,214 @@ section {
   text-align: center;
   font-size: 13px;
 }
+
+.speaker-head{
+  height:60px; width:60px;
+   border-radius:60px;
+   display:inline-block;
+   overflow:hidden;
+   margin:10px;
+   margin-left:0px;
+}
+.speaker-head img{
+  width:100%;
+}
+.agenda-speakers{
+  display: inline-flex;
+   align-items:center;
+   margin-right:10px
+
+}
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Timeline holder */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ /* Timeline vertical line */
+ul.timeline:before {
+    content: ' ';
+    background: #ccc;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+}
+
+li.timeline-item {
+    margin: 20px 15px;
+}
+
+/* Timeline item arrow */
+.timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+    content: ' ';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    left: 11px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Animated Background Elements */
+
+.light {
+  position: fixed;
+  width: 0px;
+  opacity: .75;
+  background-color: white;
+  box-shadow: #00cc00 0px 0px 10px 2px;
+  opacity: 0;
+  top: 100vh;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  z-index:-1;
+}
+
+.x1{
+animation: floatUp 2s infinite linear;
+ -webkit-transform: scale(1.0);
+ -moz-transform: scale(1.0);
+ -o-transform: scale(1.0);
+transform: scale(1.0);
+}
+
+.x2{
+animation: floatUp 4s infinite linear;
+-webkit-transform: scale(1.6);
+-moz-transform: scale(1.6);
+-o-transform: scale(1.6);
+transform: scale(1.6);
+left: 15%;
+}
+
+.x3{
+animation: floatUp 1.5s infinite linear;
+-webkit-transform: scale(.5);
+-moz-transform: scale(.5);
+-o-transform: scale(.5);
+transform: scale(.5);
+left: -15%;
+}
+
+.x4{
+animation: floatUp 2.5s infinite linear;
+-webkit-transform: scale(1.2);
+-moz-transform: scale(1.2);
+-o-transform: scale(1.2);
+transform: scale(1.2);
+left: -34%;
+}
+
+.x5{
+animation: floatUp 3.4s infinite linear;
+-webkit-transform: scale(2.2);
+-moz-transform: scale(2.2);
+-o-transform: scale(2.2);
+transform: scale(2.2);
+left: -57%;
+}
+
+.x6{
+animation: floatUp 3s infinite linear;
+-webkit-transform: scale(.8);
+-moz-transform: scale(.8);
+-o-transform: scale(.8);
+transform: scale(.8);
+left: -81%;
+}
+
+.x7{
+animation: floatUp 2.3s infinite linear;
+-webkit-transform: scale(3.2);
+-moz-transform: scale(3.2);
+-o-transform: scale(3.2);
+transform: scale(3.2);
+left: 37%;
+}
+
+.x8{
+animation: floatUp 1.7s infinite linear;
+-webkit-transform: scale(1.7);
+-moz-transform: scale(1.7);
+-o-transform: scale(1.7);
+transform: scale(1.7);
+left: 62%;
+}
+
+.x9{
+animation: floatUp 2.1s infinite linear;
+-webkit-transform: scale(0.9);
+-moz-transform: scale(0.9);
+-o-transform: scale(0.9);
+transform: scale(0.9);
+left: 85%;
+}
+
+button:focus{
+outline: none;
+}
+
+
+@keyframes floatUp{
+0%{top: 100vh; opacity: 0;}
+15%{opacity: 0.5;}
+30%{top: 0vh; opacity: .3;}
+45%{opacity: 0.5;}
+60%{top: -100vh; opacity: 0;}
+100%{top: -100vh; opacity: 0;}
+}
+
+
+
+@keyframes fadeIn{
+from{opacity: 0;}
+to{opacity: 1;}
+}
+
+
+@keyframes fadeOut{
+0%{opacity: 0;}
+30%{opacity: 1;}
+80%{opacity: .9;}
+100%{opacity: 0;}
+}
+
+
+@keyframes finalFade{
+0%{opacity: 0;}
+30%{opacity: 1;}
+80%{opacity: .9;}
+100%{opacity: 1;}
+}
+
